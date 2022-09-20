@@ -29,7 +29,12 @@ Following Python packages are used in the project.
 ## Execute the project
 Download the project from:
 ```
-https://github.com/AsaraSenaratne/SEKA.git
+git clone git@github.com:AsaraSenaratne/SEKA.git
+```
+
+Open a terminal and change directory to the cloned project:
+```
+cd SEKA
 ```
 
 Install the required packages:
@@ -37,25 +42,14 @@ Install the required packages:
 pip install -r requirements.txt
 ```
 
-Open a terminal and change directory to the cloned project:
-```
-cd <path_to_directory>/SEKA
-
-```
-
-
 Ensure that the following resources are inside the 'assets' folder. They should be properly
 downloaded, and imported.
-````
-en_core_web_sm-3.0.0
-Download lilnk: https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.0.0/en_core_web_sm-3.0.0.tar.gz
 
-stanford-ner-4.2.0
-Download lilnk: https://nlp.stanford.edu/software/stanford-ner-4.2.0.zip
-
-YAGO-1
-https://yago-knowledge.org/downloads/yago-1
-
+```
+mkdir assets
+wget https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.0.0/en_core_web_sm-3.0.0.tar.gz
+wget https://nlp.stanford.edu/software/stanford-ner-4.2.0.zip
+wget https://yago-knowledge.org/downloads/yago-1
 ````
 
 
