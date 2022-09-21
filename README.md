@@ -1,17 +1,24 @@
 # SEKA : Seeking Knowledge Graph Anomalies
 
 ## Introduction
-This is an open access repository produced as a part of research conducted contributing towards a PhD in Computer Science. The development of this project is still under progress. Hence, there will be frequent source code commits.
 
-This repository provides the implementation of an approach to unsupervised anomaly detection in knowledge graphs. We first 
-characterize triples in a directed edge-labelled knowledge graph using a set of binary features, and then employ a one-class support vector machine classifier to classify these
-triples  as normal or abnormal. 
+Development is under progress. Expect frequent source code commits.
 
-## Technologies
+This repository provides the implementation of an approach to
+unsupervised anomaly detection in knowledge graphs. The algorithm
+first characterises triples in a directed edge-labelled knowledge
+graph using a set of binary features, and then uses a one-class
+support vector machine classifier to classify the triples as normal or
+abnormal.
+
+## Requirements
+
 This project is implemented using:
+
 * Python 3.6
 
 Following Python packages are used in the project. 
+
 * pandas v1.3.1
 * nltk v3.6.2
 * networkx v2.6.2
@@ -27,30 +34,44 @@ Following Python packages are used in the project.
 
 
 ## Execute the project
-Download the project from:
-```
+
+Download the project:
+
+```bash
 git clone git@github.com:AsaraSenaratne/SEKA.git
 ```
 
 Open a terminal and change directory to the cloned project:
-```
+
+```bash
 cd SEKA
 ```
 
 Install the required packages:
-```
+
+```bash
 pip install -r requirements.txt
 ```
 
-Ensure that the following resources are inside the 'assets' folder. They should be properly
-downloaded, and imported.
+Ensure that the following resources are inside the 'assets'
+folder. They should be properly downloaded, and imported.
 
 ```
 mkdir assets
+pushd assets
+
 wget https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.0.0/en_core_web_sm-3.0.0.tar.gz
 wget https://nlp.stanford.edu/software/stanford-ner-4.2.0.zip
-wget https://yago-knowledge.org/downloads/yago-1
+wget https://yago-knowledge.org/data/yago1/yago-1.0.0-turtle.7z
+
+tar xvf en_core_web_sm-3.0.0.tar.gz
+unzip stanford-ner-4.2.0.zip
+7z x yago-1.0.0-turtle.7z
+
+popd
 ````
+
+This demo using YAGO requires quite a bit of RAM, over 16GB.
 
 
 The .py files in the folder run in the following order:
