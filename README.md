@@ -59,20 +59,25 @@ folder. They should be properly downloaded, and imported.
 ```
 mkdir assets
 pushd assets
+```
 
+```
 wget https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.0.0/en_core_web_sm-3.0.0.tar.gz
 wget https://nlp.stanford.edu/software/stanford-ner-4.2.0.zip
 wget https://yago-knowledge.org/data/yago1/yago-1.0.0-turtle.7z
+```
 
+```
 tar xvf en_core_web_sm-3.0.0.tar.gz
 unzip stanford-ner-4.2.0.zip
 7z x yago-1.0.0-turtle.7z
+```
 
+```
 popd
 ````
 
 This demo using YAGO requires quite a bit of RAM, over 16GB.
-
 
 The .py files in the folder run in the following order:
 
